@@ -1,0 +1,16 @@
+@font-face{
+    font-family: 'open-sans';
+    src: url('open-sans/OpenSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('open-sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('open-sans/OpenSans-Regular.woff2') format('woff2'), /* Modern Browsers */
+        url('open-sans/OpenSans-Regular.woff') format('woff'), /* modern Browsers */
+        url('open-sans/OpenSans-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('open-sans/OpenSans-Regular.svg') format('svg'); /* Legacy iOS */
+}
+@font-face{
+    font-family: 'open-sans';
+    src: url('cairo/Cairo-Regular.eot'); /* IE9 Compat Modes */
+    src:url('cairo/Cairo-Regular.woff2') format('woff2'), /* Modern Browsers */
+        url('cairo/Cairo-Regular.woff') format('woff'), /* modern Browsers */
+        url('cairo/Cairo-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

@@ -1,0 +1,59 @@
+/***************************************************market header************************/
+.market-header{
+    @include mdScreen{
+        font-size: 50px;
+    }
+    @include smScreen{
+        font-size: 27px;
+    }
+    font-size: 70px;
+    font-weight: 700;
+    color: $snd-color;
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+/**********************************************miliraty*************************/
+.militry-item{
+    height: 100%;
+    text-align: center;
+    .militry-item__img{
+        @include smScreen{
+            width: 100px;
+            height: 100px;
+        }
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 20px auto;
+        background-image: url(../../images/client/military-and-defence/1.png);
+        background-size: cover;
+    };
+    h4{
+        @include smScreen{
+            width: 70%;
+        }
+        font-size: 14px;
+        font-weight: 700;
+        color: $snd-color;
+        text-transform: uppercase;
+        margin:35px auto;
+        width: 50%;
+        text-align: center;
+
+    }
+}
+
+.main-bg{
+    background-color:$snd-color;
+    h2,h4{
+        color: $secondary_color;
+    }
+
+}
+.militry{
+    overflow: hidden;
+    h2{
+        color: $main-color;
+    }
+}

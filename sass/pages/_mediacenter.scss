@@ -1,0 +1,25 @@
+/************************slider*******************************/
+.slide_media{
+    .slider__content{
+        position: relative;
+        &::before{
+        content: '';
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #00000052;
+        z-index: 99;
+        }
+    }
+    
+  }
+/************************************section tweets******************************/
+.tweets{
+    background-color: #E8ECF7;
+    padding: 30px 0px;
+}
+.timetweets{
+    border-radius: 5px;
+}

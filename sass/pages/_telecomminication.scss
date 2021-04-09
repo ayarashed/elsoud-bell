@@ -1,0 +1,43 @@
+/****************************slider************************************/
+.telecomunication__slider{
+    .owl-slider{
+        .slider__content{
+            h1{
+                padding-top: 320px;
+                color: #ADADAD;
+                text-transform: uppercase;
+                width: 40%;
+                font-size: 30px;
+                line-height: 1.7;
+                font-weight: 700;
+                text-shadow: 1px 1px 5px #000;
+                margin-bottom: 40px;
+            }
+        }
+    } 
+}
+/**********************************************telecomunication effictive*********************************/
+.telecomunication__effictive{
+    h5{
+        @media only screen and (max-width : 1024px){
+            font-size: 25px!important;
+        }
+        
+    }
+    
+}
+.telecomunication__circl{
+    margin-#{$start-dir}: 0px!important;
+        @media only screen and (min-width : 769px) and (max-width : 1024px){
+            height: 220px!important;
+            width: 220px!important;
+            margin-left: 0px!important;
+    }
+    
+@media only screen and (min-width : 481px) and (max-width : 768px){
+        height: 250px!important;
+        width: 250px!important;
+        margin-left: 0px!important;
+        margin-bottom: 20px;
+    }
+}

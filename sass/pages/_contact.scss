@@ -1,0 +1,105 @@
+%btn{
+    border-color: rgba(0, 173, 239,.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset, 0 0 5px rgba(0, 173, 239,.6);
+    outline: 0 none;
+}
+.contact{
+    overflow: hidden;
+    background-color: #ededed;
+    padding: 20px 0;
+    .contact-text{
+        color: $snd-color;
+        text-align: center;
+        font-size: 17px;
+        margin:15px 0
+    }
+    .contact-us{
+        background-image: url(../../content/assets/images/saudi-bell-logo.png);
+        background-size: 100px;
+        background-position:left bottom;
+        background-repeat: no-repeat;
+        padding-bottom: 25px;
+        .contact-map{
+            text-align: center;
+            .contact-map__content{
+                img{
+                    width: 100%;
+                    filter: grayscale(100%);
+                    margin-bottom: 20px;
+                    transition: all 0.3s;
+                    &:hover{
+                        filter: grayscale(0);
+                    }
+                }
+                h4{
+                    text-transform: uppercase;
+                    font-size: 25px;
+                    color:$main-color
+                }
+                p{
+                    color: $third-color;
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+        .contact-fields{
+            text-align: center;
+            margin:20px 0;
+            font-size: 22px;
+            a{
+                color:$third-color;
+                padding:0 7px;
+                text-decoration: none;
+            }
+            .svg-inline--fa{
+                font-size: 35px;
+                color: $main-color;
+            }
+    
+        }
+        label{
+            background: $main-color;
+            color: $secondary_color;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: calc(.375rem + 1px);
+            padding-bottom: calc(.375rem + 1px);
+            width: 100%;
+        }
+        .form-control{
+            border: 2px solid #00adef;
+            padding: .375rem .75rem;
+        }
+    .form-select {
+        appearance: none;
+        background-image: none;
+      }
+      
+      .input-dropdown .svg-inline--fa {
+        float: right;
+        margin-top: -49px;
+        margin-right: 10px;
+        pointer-events: none;
+        color: $main-color;
+        font-size: 45px;
+        padding-right: 5px;
+      }
+      .mesText{
+          text-align: center;
+          .btn{
+            background-color: $main-color;
+            color: $secondary_color;
+            font-size: 26px;
+            text-transform: uppercase;
+            line-height: 1.75;
+            padding: 5px 80px;
+        }
+      }
+    }
+    .error{
+        margin:2px 0;
+    }
+    
+  }

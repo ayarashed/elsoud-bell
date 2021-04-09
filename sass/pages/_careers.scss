@@ -1,0 +1,206 @@
+/********************************************slider****************************/
+.slide_careers{
+    .slider__content{
+        position: relative;
+        &::before{
+        content: '';
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #00000052;
+        z-index: 99;
+        }
+    }
+    
+}
+.careers__solution{
+    background-color: #EDEDED;
+    padding: 30px 0px 75px 0px;
+    p{
+        padding: 0!important;
+        font-size: 17px;
+        font-weight: 100;
+    }
+}
+/******************************carrers form*************************************/
+.careersform{
+    background-color: #EDEDED;
+    padding-bottom: 30px;
+    .careers-form{
+        .form-group{
+            @media only screen and (min-width : 320px) and (max-width : 480px){
+                padding: 0px 60px;
+            }
+        }
+    .form-control{
+        display: inline-block;
+        border: 2px solid $main-color;
+        border-radius: 0px;
+        padding: 5px;
+        margin-bottom: 15px;
+        background-color: #EDEDED;
+        @media only screen and (min-width : 769px) and (max-width : 1024px){
+        }
+        @media only screen and (min-width : 481px) and (max-width : 768px){
+            padding: 2px;
+        }
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+            padding: 2px;
+            margin-#{$start-dir}: 0px;
+        }
+    }
+    label{
+        padding: 7px;
+        width: 100%;
+        background-color: $main-color;
+        color: $secondary_color;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+        @media only screen and (min-width : 769px) and (max-width : 1024px){
+            //width: 30%;
+        }
+        @media only screen and (min-width : 481px) and (max-width : 768px){
+           // width: 30%;
+            font-size: 13px;
+            padding: 5px 4px;
+        }
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+           // width: 100%;
+            font-size: 13px;
+            padding: 5px 4px;
+        }
+    }
+    input[type=submit]{
+        font-size: 26px;
+        margin-top: 20px;
+        padding: 6px 100px;
+        border: 1px solid $main-color;
+        border-radius: 0;
+        background-color: $main-color;
+        &:hover{
+            background-color: white;
+            color:$main-color;
+        }
+        @media only screen and (min-width : 481px) and (max-width : 768px){
+            font-size: 16px;
+            padding: 6px 50px;
+        }
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+            font-size: 15px;
+            padding: 6px 35px;
+        }
+    }
+}
+}
+.careers__circle{
+    .careers__circle-contain{
+        background-color: #6e9dd3;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-100%);
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+          width: 110px;
+          height: 110px;
+        }
+        .careers__circle__first{
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 10px solid #6e9dd3;
+            transform: translate(-50%,-50%);
+            animation: fadein ease-in-out 2s infinite;
+            opacity: 0;
+            animation-direction: alternate;
+            @media only screen and (min-width : 320px) and (max-width : 480px){
+            width: 160px;
+            height: 160px;
+            }
+        }
+        .careers__circle__second{
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border: 10px solid #6e9dd3;
+          transform: translate(-50%,-50%);
+          animation: careersfadeout ease-in-out 2s 0.5s infinite;
+          opacity: 0.5;
+          animation-direction: alternate;
+          @media only screen and (min-width : 320px) and (max-width : 480px){
+            width: 200px;
+            height: 200px;
+          }
+        }
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+            display: none;
+        }
+    }
+}
+
+.left{
+    position: relative;
+    left: 100%;
+    transform: translateX(-75%);
+    top: 52%;
+    .careers__circle-contain{
+        width: 20px;
+        height: 20px;
+    }
+    .careers__circle__second{
+        width: 80px;
+        height: 80px;
+    }
+    .careers__circle__first{
+        width: 50px;
+        height: 50px;
+    }
+}
+.right{
+    position: relative;
+    left: 100%;
+    transform: translateX(-70%);
+    top: 0;
+    .careers__circle-contain{
+        width: 50px;
+        height: 50px;
+    }
+    .careers__circle__second{
+        width: 100px;
+        height: 100px;
+    }
+    .careers__circle__first{
+        width: 130px;
+        height: 130px;
+    }
+    
+}
+@keyframes careersfadein {
+    from { opacity: 0; }
+    to   { opacity: 0.8; }
+  }
+  
+  @keyframes careersfadeout{
+    from { opacity: 0.5; }
+    to   { opacity: 0; }
+  }
+/*******************************************error and attention form*****************************/
+.error{
+    color: red;
+    margin-left: 13px;
+    font-size: 13px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    background-color: #EDEDED!important;
+    color: red!important;
+    text-align: $start-dir!important;
+}
+.attention{
+    border: 1px solid red !important;
+}

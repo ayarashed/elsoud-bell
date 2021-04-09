@@ -1,0 +1,18 @@
+.container{
+    @include xxLargScreen{
+        max-width: 1320px;
+    };
+    @include xlgScreen{
+        max-width: 1140px;
+    };
+    @include largScreen{
+        max-width: 960px;
+    };
+    @include mdScreen{
+        max-width: 720px;
+    };
+    @include smScreen{
+        max-width: 540px;
+    };
+    
+}

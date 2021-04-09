@@ -1,0 +1,40 @@
+.physical_slider{
+    .owl-slider{
+        .slider__content{
+            h1{
+                padding-top: 320px;
+                color: #ADADAD;
+                text-transform: uppercase;
+                width: 40%;
+                font-size: 30px;
+                line-height: 1.7;
+                font-weight: 700;
+                text-shadow: 1px 1px 5px #000;
+                margin-bottom: 40px;
+            }
+        }
+    } 
+}
+/*****************************PROTECTING**************************************/
+.physical__protecting{
+    h5{
+        @media only screen and (max-width : 1024px){
+            font-size: 25px!important;
+        }
+        
+    }
+}
+/********************physical solution*********************************/
+.physical__solution{
+    margin-bottom: 20px;
+    margin-#{$start-dir}: 0px!important;
+    @media only screen and (min-width : 769px) and (max-width : 1024px){
+        height: 200px!important;
+        width: 200px!important;
+    }
+    @media only screen and (min-width : 481px) and (max-width : 768px){
+        height: 170px!important;
+        width: 170px!important;
+        margin-left: 0px!important;
+    }
+}

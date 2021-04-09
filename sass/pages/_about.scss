@@ -1,0 +1,559 @@
+/***********************************************slider*******************************/
+.slide_about{
+  .slider__content{
+      position: relative;
+      &::before{
+      content: '';
+      width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #00000052;
+      z-index: 99;
+      }
+  }
+  
+}
+/**************************************************************************************************/
+.about-us {
+  background-color: $background_color;
+  padding: 1.25rem;
+
+  &__info{
+      width: 80%;
+      text-align: center;
+      margin: auto;
+      &__title{
+              color: $main-color;
+              font-weight: 600;
+              font-size: 70px;
+              text-align: center;
+              padding: 1.25rem 0;
+              text-transform: uppercase;
+              @include mdScreen{
+                      font-size: 50px;
+                  }
+              @include smScreen{
+                      font-size: 35px;
+                  }
+              
+      }
+
+      &__p{
+          font-size: 17px;
+          font-weight: 100;
+          color: $des_color;
+          text-align: justify;
+      }
+
+  }    
+}
+/*****************************************success story*********************************/
+.success-stories{
+  padding-bottom: 85px;
+  .container-items{
+    display: flex;
+  }
+  .success-stories__card{
+      height: 100%;
+      .success-stories__img{
+          border: 1px solid #000;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          background-color:$secondary-color;
+          img{
+              height: 244px;
+              width: 100%;
+          }
+      }
+      .card-body{
+        min-height: 350px;
+
+          &__title{
+              color: $snd-color;
+              font-size: 18px;
+              text-align: center;
+              text-transform: uppercase;
+              font-weight: 700;
+              @include mdScreen{
+                  font-size: 14px;
+              }
+  
+          }
+          &__caption{
+              font-size: 16px;
+              margin-top: 1.25rem;
+              color: $main-color;
+              text-align: center;
+              text-transform: uppercase;
+          }
+          &__des{
+              text-align: justify;
+              font-size: 1rem;
+              color:$des_color;
+          }
+      }
+      .learn-more{
+          .btn-collaps{
+              background-color: $main-color;
+              color: $secondary_color !important;
+              font-size: 1.25rem;
+              border: none;
+              cursor: pointer;
+              text-align: center !important;
+              margin: auto !important;
+              padding: 1rem 1.25rem;
+              span{
+                float: $end-dir;
+              }
+          }
+          
+      }
+      .accordion-body{
+        display: none;
+      }
+      .appear{
+        display: block;
+      }
+  
+  }
+  
+}
+/******************************vision on page about**************************************************************/
+.vision__about{
+  background-color: $background_divs;
+  padding: 90px 0px;
+}
+/****************************time line*****************************************************************/
+.timeline{
+  margin: 50px 0px;
+  .timeline-about{
+    .timeline__container{
+      display: flex;
+      position: relative;
+      .container-item{
+        text-align: center;
+        transform: translateX(-50% * $transform-direction );
+        &:last-of-type{
+          transform: translateX(50% * $transform-direction );
+          .year{
+            top: 80px;
+            &::before{
+              bottom: 45px;
+            }
+          }
+        }
+        &:nth-of-type(5){
+          transform: translateX(10% * $transform-direction );
+          .year{
+            top: 80px;
+            position: relative;
+            &::before{
+              bottom: 45px;
+            }
+          }
+        }
+        &:nth-of-type(4){
+          transform: translateX(-10% * $transform-direction );
+        }
+        &:nth-of-type(3){
+          transform: translateX(-40% * $transform-direction );
+        }
+        &:nth-of-type(2){
+          .year{
+            top: 80px;
+            position: relative;
+            &::before{
+              bottom: 45px;
+            }
+          }
+        }
+        .year{
+          &::before{
+            content: '';
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            border-radius: 50%;
+            left: 50%;
+            bottom: 35px;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            background-image: url(../../../images/main-icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+          }
+          
+      }
+      .year__info{
+          visibility: hidden;
+        }
+        &:hover{
+          .year__info{
+            visibility: visible;
+            display: inline-block;
+          }
+        }
+      }
+      &::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #0094da;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+/**************************************************************************************/
+.about-timeline{
+  .container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline_meduim{
+    width: 80%;
+    height: auto;
+    max-width : 800px;
+    max-width: 0 auto;
+    position: relative;
+    padding-top: 65px;
+    ul{
+      list-style: none;
+      li{
+        padding: 20px;
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .timeline-content{
+          h1{
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 10px;
+          }
+          p{
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 300;
+            opacity: 0;
+          }
+          
+        }
+        @media  only screen and (max-width: 1024px) {
+          width: 50%;
+          margin-bottom: 50px;
+          position: relative;
+          &:nth-child(odd){
+            text-align: center;
+            clear: right;
+            &::after{
+              transform: translate(-50% * $transform-direction , -50%);
+            }
+          }
+          &:nth-child(even){
+            text-align: center;
+            clear: left;
+            &::after{
+              transform: translate(-50% * $transform-direction , -50%);
+            }
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url(../../../images/main-icon.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            top: 0;
+          }
+        }
+      @media only screen and (min-width : 481px) and (max-width : 768px){
+        &:nth-child(odd){
+          transform: translateX(115px * $transform-direction);
+          &::after{
+           $end-dir: 112px;
+          }
+        }
+        &:nth-child(even){
+          &::after{
+            $end-dir: 112px!important;
+          }
+            transform: translateX(115px * $transform-direction)!important;
+        }
+      }
+      @media only screen and (min-width : 426px) and (max-width : 768px){}
+      @media only screen and (min-width : 376px) and (max-width : 425px){
+        &:nth-child(odd){
+          transform: translateX(55px * $transform-direction);
+          &::after{
+            $end-dir: 32px;
+          }
+        }
+        &:nth-child(even){
+          &::after{
+            $end-dir: 26px!important;
+          }
+            transform: translateX(55px * $transform-direction)!important;
+        }
+      }
+      @media only screen and (min-width : 320px) and (max-width : 375px){
+        &:nth-child(odd){
+          transform: translateX(35px * $transform-direction);
+          &::after{
+            $end-dir: 32px;
+          }
+        }
+        &:nth-child(even){
+          &::after{
+            $end-dir: 26px!important;
+          }
+            transform: translateX(35px * $transform-direction)!important;
+        }
+      }
+        &:hover{
+          p{
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @media  only screen and (max-width: 1024px) {
+      &::before{
+        content: '';
+        position: absolute;
+        height: 81%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50% * $transform-direction);
+        background-color: $main-color;
+      }
+    }
+      @media  only screen and (max-width: 374px) {
+        &::before{
+          height: 82%;
+        }
+    }
+  }
+}
+
+/*********************why saudi bell******************************************/
+.saudi-bell{
+  background-color: $third_color;
+  padding-bottom: 30px;
+  h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+    padding: 20px 0;
+    color: $secondary_color;
+    @media only screen and (min-width : 426px) and (max-width : 768px){
+      font-size: 45px;
+    }
+    @media only screen and (min-width : 320px) and (max-width : 480px){
+      font-size: 30px;
+    }
+  }
+  .saudi-bell__text{
+    p{
+      color: $secondary_color;
+      font-size: 17px;
+      font-weight: 100;
+      @media only screen and (min-width : 481px) and (max-width : 768px){
+        font-size: 13px;
+      }
+      @media only screen and (min-width : 320px) and (max-width : 374px){
+        font-size: 14px;
+      }
+    }
+  }
+  .saudi-bell__logo{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 50%;
+      height: 2px;
+      background-color: #1881c5;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+    }
+    .saudi-bell__logo__circle{
+      width: 150px;
+      height: 150px;
+      background-color: $main-color;
+      border-radius: 50%;
+      position: relative;
+      top: 50px;
+      text-align: center;
+      @media only screen and (min-width : 320px) and (max-width : 480px){
+        width: 110px;
+        height: 110px;
+      }
+      .saudi-bell__logo__circle__first{
+        width: 185px;
+        height: 185px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 10px solid #6e9dd3;
+        transform: translate(-50%,-50%);
+        animation: fadein ease-in-out 2s infinite;
+        opacity: 0;
+        animation-direction: alternate;
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+          width: 160px;
+          height: 160px;
+        }
+      }
+      .saudi-bell__logo__circle__second{
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 10px solid #6e9dd3;
+        transform: translate(-50%,-50%);
+        animation: fadeout ease-in-out 2s 0.5s infinite;
+        opacity: 1;
+        animation-direction: alternate;
+        @media only screen and (min-width : 320px) and (max-width : 480px){
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+    .saudi-bell__logo__circle__third{
+      width: 285px;
+      height: 285px;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 10px solid #6e9dd3;
+      transform: translate(-50%,-50%);
+      animation: fadein ease-in-out 2s 1s infinite;
+      opacity: 0;
+      animation-direction: alternate;
+      @media only screen and (min-width : 320px) and (max-width : 480px){
+        width: 245px;
+        height: 245px;
+      }
+    }
+    }
+    @media only screen and (min-width : 320px) and (max-width : 480px){
+      padding-bottom: 120px;
+    }
+  }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeout{
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+/****************************founders meassage**************************************/
+.founders{
+
+  background-color: #ededed;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+
+  h1{
+      color: #191f39;
+      font-weight: 700;
+      font-size: 70px;
+      padding: 20px 0;
+      @media only screen  and (min-width:320px) and (max-width:480px){
+          font-size:28px ;
+      }
+      @media only screen and (min-width : 481px) and (max-width : 768px){
+        font-size: 45px;
+      }
+  } 
+  &__info{
+
+      margin: 20px 0;
+  
+  }
+
+  .desc{
+
+      width: 80%;
+      margin: auto;
+
+  }
+
+  p{
+      font-family: 'Helvetica Neue', sans-serif !important;
+      font-size: 17px;
+      font-weight: 100px;
+      color: #58595b;
+      text-align: justify;
+      
+  }
+
+  &__img1{
+      background-image: url(../../../images/Picture3.png);
+      width: 250px;
+      height: 250px;
+      background-size: contain;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      @media only screen  and (min-width:320px) and (max-width:480px){
+
+          margin: 0 auto ;
+          
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        padding: 40px;
+        position: relative;
+        top: 5px;
+  }
+}
+&__img2{
+          background-image: url(../../../images/Picture3.png);
+          width: 250px;
+          height: 250px;
+          background-size: contain;
+          overflow: hidden;
+          background-repeat: no-repeat;
+          @media only screen  and (min-width:320px) and (max-width:480px){
+              margin: 0 auto ;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            padding: 40px;
+            position: relative;
+            top: 5px;
+      }
+          } 
+}
